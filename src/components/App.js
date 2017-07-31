@@ -10,7 +10,6 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Hey</h1>
-      <BaseLayout />
       </div>
     );
   }

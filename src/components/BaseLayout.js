@@ -1,18 +1,20 @@
 import React, {Component} from 'react';
 
+import Navigation from './Navigation.js';
 import CreatePost from './CreatePost.js';
 import PostList from './PostList.js';
-import ShowPost from './ShowPost.js';
 
 
-
-export default function BaseLayout(props){
-  return(
-    <div>
-    <h3>BaseLayout Component</h3>
-    <CreatePost />
-    <PostList />
-    <ShowPost />
-    </div>
-  );
+export default class BaseLayout extends Component{
+  constructor(props){
+    super(props);
+  }
+  render(){
+    return(
+      <div>
+        <Navigation />
+        {this.props.children}
+      </div>
+    );
+  }
 }
