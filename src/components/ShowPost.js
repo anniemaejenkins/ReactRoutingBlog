@@ -6,6 +6,9 @@ export default class ShowPost extends Component{
     console.log('');
     return(
       <div>
+        <p>Name: {this.props.post.name}</p>
+        <p>Title: {this.props.post.title}</p>
+        <p>Blog: {this.props.post.blog}</p>
       </div>
     );
   }
