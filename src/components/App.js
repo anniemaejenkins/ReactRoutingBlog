@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import BaseLayout from './BaseLayout.js';
-
 // styles
 import './../styles/App.css';
 

@@ -1,8 +1,12 @@
-import React from 'react';
+import React, {Component} from 'react';
 
 
-export default function ShowPost(props){
-  return(
-    <h3>ShowPost Component</h3>
-  );
+export default class ShowPost extends Component{
+  render(){
+    console.log('');
+    return(
+      <div>
+      </div>
+    );
+  }
 }
