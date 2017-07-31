@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+
+import BaseLayout from './BaseLayout.js';
+
+// styles
 import './../styles/App.css';
 
 class App extends Component {
@@ -6,6 +10,7 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Hey</h1>
+      <BaseLayout />
       </div>
     );
   }
