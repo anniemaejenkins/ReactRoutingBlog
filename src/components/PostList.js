@@ -10,9 +10,7 @@ export default class PostList extends Component{
     this.state = {
       posts: []
     };
-
   }
-
   // componentdidmount then fetch
   // state be empty array then map over state
 

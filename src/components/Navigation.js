@@ -12,7 +12,7 @@ export default class Navigation extends Component{
 
         <div>
           <button>
-            <NavLink to="/">
+            <NavLink className="homeLink" to="/">
               Home
             </NavLink>
           </button>
@@ -20,7 +20,7 @@ export default class Navigation extends Component{
 
           <div>
             <button>
-              <NavLink to="/createpost">
+              <NavLink className="createLink" to="/createpost">
                 Create Post
               </NavLink>
             </button>
@@ -28,7 +28,7 @@ export default class Navigation extends Component{
 
           <div>
             <button>
-              <NavLink to="/postlist">
+              <NavLink className="listLink" to="/postlist">
                 Posts
               </NavLink>
             </button>
