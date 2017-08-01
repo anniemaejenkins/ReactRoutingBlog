@@ -59,19 +59,22 @@ _addToList(event){
     return(
       <div className="form-group">
         <form onSubmit={this._addToList}>
-          <div>
-            <label>Name</label>
+          <div className="name">
+            <label >Name</label>
+            <br></br>
             <input type="text" value={this.state.name} onChange={this._handleName}/>
           </div>
 
-          <div>
+          <div className="title">
             <label>Title</label>
+            <br></br>
             <input type="text" value={this.state.title} onChange={this._handleTitle}/>
           </div>
 
-          <div>
+          <div className="blog">
             <label>Write your blog..</label>
-            <input type="textarea" value={this.state.blog} onChange={this._handleBlog}/>
+            <br></br>
+            <textarea className="blogText" rows="10" cols="50" type="textarea" value={this.state.blog} onChange={this._handleBlog}/>
           </div>
 
           <input type="submit"/>

@@ -1,29 +1,37 @@
 import React, {Component} from 'react';
 
-
-// do a fetch of the posts and use .find to return single object that matches the url id
-
-
 export default class ShowPost extends Component{
   constructor(props){
     super(props);
     this.state = {
-      posts: []
+      post: {}
     };
   }
-  render(){
-    return(
-      <div>
-        hey
-      </div>
-    );
-  }
+  // do a fetch of the posts and use .find to return single object that matches the url id
   componentDidMount(){
     fetch("https://tiny-lasagna-server.herokuapp.com/collections/bloggerannie/").then(results => {
       return results.json();
     }).then(data => {
-      this.setState({posts: data});
-      console.log("state", this.state.posts);
+      // use .find on the data array to return the object you want
+      let post = data.find((item)=>{
+        return item._id === this.props.match.params.id
+      });
+      console.log("post", post);
+      // then set state
+      this.setState({post});
     });
   }
+
+    render(){
+      // console.log('mady', this.props.match.params.id);
+    return(
+      <div className="showPost">
+        <h1>Post Details</h1>
+        <p>Name: {this.state.post.name}</p>
+        <p>Title: {this.state.post.title}</p>
+        <p>Blog post: {this.state.post.blog}</p>
+      </div>
+    );
+  }
+
 }

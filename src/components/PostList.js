@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
 
-import ShowPost from './ShowPost.js';
-
 import { Link } from 'react-router-dom';
 
 export default class PostList extends Component{
@@ -27,14 +25,14 @@ export default class PostList extends Component{
     console.log('props', this.props);
     let posts = this.state.posts.map((post, index) => {
       return (
-        <div key={ index }>
+        <div className="listTitle" key={ index }>
           <Link to={`${this.props.match.url}/${post._id}`}>{post.title}</Link>
         </div>
       )
     })
     return(
-      <div>
-        <p>stuff</p>
+      <div className="list">
+        <h1>Here are all the posts so far!</h1>
         {posts}
       </div>
     )
